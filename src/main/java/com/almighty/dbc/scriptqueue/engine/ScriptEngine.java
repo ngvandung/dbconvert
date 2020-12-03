@@ -128,6 +128,10 @@ public class ScriptEngine {
 			variables.putAll(dynamicTarget);
 		}
 	}
+	
+	public static void main(String[] args) {
+		System.out.println(5%100);
+	}
 
 	protected void parseScript(JSONObject json) {
 

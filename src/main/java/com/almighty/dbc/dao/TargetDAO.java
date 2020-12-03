@@ -33,6 +33,9 @@ public class TargetDAO {
 	public boolean execute(String sql) {
 		LOGGER.info("TargetDAO:execute " + sql);
 		int result = jdbcTemplate.update(sql);
+		if (sql.contains("delete from")) {
+			return true;
+		}
 		return result == 1 ? true : false;
 	}
 
